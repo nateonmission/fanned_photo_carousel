@@ -1,0 +1,169 @@
+body {
+    background-color: darkolivegreen;  
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.div-wrapper, .collection{
+    margin:auto;
+    width: 25vmin;
+    aspect-ratio: 5/7;
+}
+
+.collection {
+    display: flex;
+    justify-content: center;
+    /* width: 200px;
+    height: 300px;  */
+    /* border: 1px red solid; */
+    position: absolute;
+    transform: transform 400ms ease;
+}
+
+
+
+/* .one {
+    background-image: linear-gradient(darkred, purple, blue, green);
+    
+}
+
+.two {
+    background-image: linear-gradient(orange, red, purple, blue);
+    
+}
+
+.three {
+    background-image: linear-gradient(yellow, green, blue, purple);
+    
+}
+
+.four {
+    background-image: linear-gradient(green, yellow, orange, darkred);
+    
+}
+
+.five {
+    background-image: linear-gradient(blue, purple, red, orange);
+    
+} */
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+
+button {
+    margin: 0;
+    padding:0;
+    color:black;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.collection[data-state="onLeft"] {
+    transform: translateX(-150%) scale(0%);
+    transition: transform 500ms  ease-in-out;
+}
+
+.collection[data-state="onRight"] {
+    transform: translateX(150%) scale(0%);
+    transition: transform 500ms  ease-in-out;
+}
+
+.collection[data-state="active"] {
+    transition: all 300ms ease-in-out;
+}
+
+.collection[data-state="activeFromLeft"] {
+    transform: translateX(150%) ;
+    transition: transform 1100ms  ease-in-out;
+}
+
+.collection[data-state="activeFromRight"] {
+    transform: translateX(-150%) ;
+    transition: transform 1100ms  ease-in-out;
+} 
+
+
+.card {
+    margin: auto;
+    width: 15vmin;
+    aspect-ratio: 5/7;
+    background-color: rgba(125,125,125,0.1);
+    border-radius: 1vmin;
+    position: absolute;
+    background-image: linear-gradient(navy, lightblue);
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+} 
+
+.card:nth-child(1) {
+    
+    background-size: cover;
+    transform: rotate(-14deg) translateX(-10%);
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+}
+
+.card:nth-child(2) {
+    
+    background-size: cover;
+    transform: rotate(-7deg) translateX(-5%);
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+}
+
+.card:nth-child(3) {
+    
+    background-size: cover;
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+}
+
+.card:nth-child(4) {
+    
+    background-size: cover;
+    transform: rotate(7deg) translateX(5%);
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+}
+
+.card:nth-child(5) {
+    
+    background-size: cover;
+    transform: rotate(14deg) translateX(10%);
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+}
+
+.collection:hover > .card:nth-child(1)  {
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+    transform: translate(-400%, 20%) rotate(-14deg) scale(2);
+}
+
+.collection:hover > .card:nth-child(2)  {
+    
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+    transform: translate(-200%, 10%) rotate(-7deg) scale(2);
+}
+
+.collection:hover > .card:nth-child(3)  {
+    
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+    transform: translate(0%, 5%) scale(2);
+}
+
+.collection:hover > .card:nth-child(4)  {
+    
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+    transform: translate(200%, 10%) rotate(7deg) scale(2);
+}
+
+.collection:hover > .card:nth-child(5)  {
+    
+    transition: transform 800ms  cubic-bezier(.22,.85,.59,.97);
+    transform: translate(400%, 20%) rotate(14deg) scale(2);
+}
